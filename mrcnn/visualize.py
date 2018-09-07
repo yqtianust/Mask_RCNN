@@ -196,9 +196,9 @@ def save_instance(image, boxes, masks, class_ids, class_names,
     # If no axis is passed, create one and automatically call show()
     auto_show = False
     if not ax:
-        _, ax = plt.subplots(1, figsize=figsize)
+        fig = plt.figure(figsize=figsize)
         auto_show = True
-
+        ax = plt.axes()
     # Generate random colors
     colors = colors or random_colors(N)
 
