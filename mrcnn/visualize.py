@@ -255,6 +255,7 @@ def save_instance(image, boxes, masks, class_ids, class_names,
     ax.imshow(masked_image.astype(np.uint8))
     if auto_show:
         plt.savefig(filename, bbox_inches='tight', dpi ='figure')
+        plt.close()
 
 
 def display_differences(image,
